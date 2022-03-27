@@ -19,10 +19,10 @@ const {
   const updateBaseUri = await yesno(`Update images base URI?`);
 
   data.forEach((item) => {
-    if(updateName) item.name = `${namePrefix} #${item.edition}`;
-    if(updateDescription) item.description = description;
-    if(updateBaseUri) item.image = `${baseUri}/${item.edition}.png`;
-  
+    if (updateName) item.name = `${namePrefix} #${item.edition}`;
+    if (updateDescription) item.description = description;
+    if (updateBaseUri) item.image = `${baseUri}/${item.edition}.png`;
+
     fs.writeFileSync(
       `${basePath}/build/json/${item.edition}.json`,
       JSON.stringify(item, null, 2)
@@ -34,7 +34,7 @@ const {
     JSON.stringify(data, null, 2)
   );
 
-  if(updateName) console.log(`Updated name prefix for images to ===> ${namePrefix}`);
-  if(updateBaseUri) console.log(`Updated baseUri for images to ===> ${baseUri}`);
-  if(updateDescription) console.log(`Updated description for images to ===> ${description}`);
+  if (updateName) console.log(`Updated name prefix for images to ===> ${namePrefix}`);
+  if (updateBaseUri) console.log(`Updated baseUri for images to ===> ${baseUri}`);
+  if (updateDescription) console.log(`Updated description for images to ===> ${description}`);
 })()

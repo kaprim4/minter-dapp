@@ -15,14 +15,14 @@ if (!fs.existsSync(path.join(buildDir, "/genericJson"))) {
 }
 
 console.log("Starting generic metadata creation.");
-
+let dateTime = Date.now();
 const genericObject = {
   "name": GENERIC_TITLE,
   "description": GENERIC_DESCRIPTION,
   "image": GENERIC_IMAGE,
   "external_url": extraMetadata.external_url || null,
-  "date": 1647039293429,
-  "compiler": "HashLips Art Engine - codeSTACKr Modified"
+  "date": dateTime,
+  "compiler": process.env.COMPILER_NAME,
 }
 
 fs.writeFileSync(
