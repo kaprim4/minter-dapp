@@ -1,4 +1,4 @@
-const contractAddress = "0xC7afd3761Ed56E2d9515eDe99b21A9163792619e"; //Replace with your own contract address
+const contractAddress = "0x5c38f96Ae49a91d5D1722C1f153a57D1eAaBa71b"; //Replace with your own contract address
 const chain = 'rinkeby'; // rinkeby or polygon
 
 const welcome_h1 = "Welcome to the META STYLISH MAN NFT Project!!";
